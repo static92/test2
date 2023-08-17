@@ -1,7 +1,7 @@
 pipeline {
 environment {
 registry = "static92/lol"
-registryCredential = 'dockerhub_id'
+registryCredential = 'c09e718d-0db5-4216-9bec-1b3420a55471'
 dockerImage = ''
 }
 agent any
