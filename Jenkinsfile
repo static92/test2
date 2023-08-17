@@ -27,9 +27,9 @@ dockerImage.push()
 }
 }
 }
-stage('Cleaning up') {
+stage('Run') {
 steps{
-sh "docker rmi $registry:$BUILD_NUMBER"
+sh "docker run static92/lol:$BUILD_NUMBER"
 }
 }
 }
