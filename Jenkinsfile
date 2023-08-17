@@ -29,7 +29,7 @@ dockerImage.push()
 }
 stage('Run') {
 steps{
-sh "docker run static92/lol:$BUILD_NUMBER"
+sh "docker run -it -d static92/lol:$BUILD_NUMBER"
 }
 }
 }
