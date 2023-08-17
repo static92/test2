@@ -1,4 +1,2 @@
-FROM anapsix/alpine-java 
-LABEL maintainer="shanem@liatrio.com"
-COPY /target/spring-petclinic-1.5.1.jar /home/spring-petclinic-1.5.1.jar 
-CMD ["java","-jar","/home/spring-petclinic-1.5.1.jar"]
+FROM ubuntu
+RUN apt-get update && apt-get upgrade -y && apt-get install -y mc
