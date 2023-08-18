@@ -14,8 +14,7 @@ git 'https://github.com/static92/test2.git'
 stage('Building our image') {
 steps{
 script {
-kek = docker.build("--label $kek") registry + ":$BUILD_NUMBER"
-lol = docker.build("--label $lol") registry + ":$BUILD_NUMBER"
+dockerImage = docker.build registry + ":$BUILD_NUMBER"
 }
 }
 }
@@ -23,8 +22,7 @@ stage('Deploy our image') {
 steps{
 script {
 docker.withRegistry( '', registryCredential ) {
-kek.push()
-lol.push()
+dockerImage.push()
 }
 }
 }
