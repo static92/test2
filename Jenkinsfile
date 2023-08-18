@@ -14,8 +14,8 @@ git 'https://github.com/static92/test2.git'
 stage('Building our image') {
 steps{
 script {
-nextcloud = docker.build registry + ":$BUILD_NUMBER"
-nmariadb = docker.build registry + ":$BUILD_NUMBER"
+kek = docker.build registry + ":$BUILD_NUMBER"
+lol = docker.build registry + ":$BUILD_NUMBER"
 }
 }
 }
@@ -23,7 +23,8 @@ stage('Deploy our image') {
 steps{
 script {
 docker.withRegistry( '', registryCredential ) {
-dockerImage.push()
+kek.push()
+lol.push()
 }
 }
 }
