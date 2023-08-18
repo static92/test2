@@ -14,7 +14,8 @@ git 'https://github.com/static92/test2.git'
 stage('Building our image') {
 steps{
 script {
-dockerImage = docker.build registry + ":$BUILD_NUMBER"
+nextcloud = docker.build registry + ":$BUILD_NUMBER"
+nmariadb = docker.build registry + ":$BUILD_NUMBER"
 }
 }
 }
