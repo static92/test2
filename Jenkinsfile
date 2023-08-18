@@ -14,8 +14,8 @@ git 'https://github.com/static92/test2.git'
 stage('Building our image') {
 steps{
 script {
-kek = docker.build registry + ":$BUILD_NUMBER"
-lol = docker.build registry + ":$BUILD_NUMBER"
+kek = docker.build --label "build-agent=${NODE_NAME}" -t $image_name registry + ":$BUILD_NUMBER"
+lol = docker.build --label "build-agent=${NODE_NAME}" -t $image_name registry + ":$BUILD_NUMBER"
 }
 }
 }
