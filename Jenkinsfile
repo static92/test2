@@ -14,7 +14,8 @@ git 'https://github.com/static92/test2.git'
 stage('Building our image') {
 steps{
 script {
-dockerImage = docker.build registry + ":$BUILD_NUMBER"
+dockerImage = docker.build --label kek registry + ":$BUILD_NUMBER"
+dockerImage = docker.build --label lol registry + ":$BUILD_NUMBER"
 }
 }
 }
@@ -29,7 +30,8 @@ dockerImage.push()
 }
 stage('Run') {
 steps{
-sh "docker run -it -d static92/lol:$BUILD_NUMBER"
+sh "docker run --label kek -it -d static92/lol:$BUILD_NUMBER"
+sh "docker run --label lol -it -d static92/lol:$BUILD_NUMBER"
 }
 }
 }
