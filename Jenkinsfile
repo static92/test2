@@ -14,7 +14,7 @@ git 'https://github.com/static92/test2.git'
 stage('Building our image') {
 steps{
 script {
-kek = docker.build("--label -t $nexcloud") registry + ":$BUILD_NUMBER"
+kek = docker.build("--label -t $nextcloud") registry + ":$BUILD_NUMBER"
 lol = docker.build("--label -t $mariadb") registry + ":$BUILD_NUMBER"
 }
 }
